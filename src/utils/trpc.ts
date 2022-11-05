@@ -1,7 +1,5 @@
-import { QueryClient } from "@tanstack/solid-query";
-import { IAppRouter } from "~/server/trpc/router/_app";
-import { createTRPCSolid } from "solid-trpc";
-import { httpBatchLink } from "@trpc/client";
+import {httpBatchLink, createTRPCProxyClient} from "@trpc/client";
+import {IAppRouter} from "~/server/trpc/router/_app";
 
 const getBaseUrl = () => {
   if (typeof window !== "undefined") return "";
@@ -9,12 +7,11 @@ const getBaseUrl = () => {
   return `http://localhost:${process.env.PORT ?? 3000}`;
 };
 
-export const trpc = createTRPCSolid<IAppRouter>();
-export const client = trpc.createClient({
+export const client = createTRPCProxyClient<IAppRouter>({
   links: [
     httpBatchLink({
       url: `${getBaseUrl()}/api/trpc`,
     }),
   ],
 });
-export const queryClient = new QueryClient();
+
