@@ -15,11 +15,11 @@ npm install -D solid-start-vercel@latest
 #### Adding to vite config
 
 ```ts
-import solid from "solid-start/vite";
-import { defineConfig } from "vite";
+import dotenv from "dotenv";
 // @ts-ignore
 import vercel from "solid-start-vercel";
-import dotenv from "dotenv";
+import solid from "solid-start/vite";
+import { defineConfig } from "vite";
 
 export default defineConfig(() => {
   dotenv.config();

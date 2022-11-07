@@ -1,39 +1,56 @@
 {
   "name": "solid-start-starter",
-  "scripts": {
-    "dev": "solid-start dev",
-    "build": "solid-start build",
-    "start": "solid-start start",
-    "push": "prisma db push",
-    "generate": "prisma generate",
-    "postbuild": "cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/"
-  },
   "type": "module",
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.18",
-    "prisma": "^4.5.0",
-    "solid-start-node": "^0.2.1",
-    "solid-start-vercel": "^0.2.5",
-    "tailwindcss": "^3.2.2",
-    "typescript": "^4.8.3",
-    "vite": "^3.1.0"
+  "scripts": {
+    "build": "solid-start build",
+    "postbuild": "cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
+    "dev": "solid-start dev",
+    "format": "prettier \"**/*\" --write --ignore-unknown",
+    "generate": "prisma generate",
+    "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx}\"",
+    "prepare": "husky install",
+    "push": "prisma db push",
+    "start": "solid-start start",
+    "type-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,md}": "eslint --cache --fix",
+    "*.{ts,tsx,css,html,md}": "prettier --write"
   },
   "dependencies": {
     "@prisma/client": "^4.5.0",
     "@solidjs/meta": "^0.28.0",
     "@solidjs/router": "^0.5.0",
-    "@tanstack/solid-query": "^4.14.3",
-    "@trpc/client": "^10.0.0-rc.2",
-    "@trpc/server": "^10.0.0-rc.2",
+    "@tanstack/solid-query": "^4.14.5",
+    "@trpc/client": "10.0.0-rc.6",
+    "@trpc/server": "10.0.0-rc.6",
     "@upstash/ratelimit": "^0.1.5",
     "@upstash/redis": "^1.16.0",
     "dotenv": "^16.0.3",
     "solid-js": "^1.5.7",
     "solid-start": "^0.2.1",
     "solid-start-trpc": "^0.0.12",
-    "undici": "5.11.0",
+    "undici": "5.12.0",
     "zod": "^3.19.1"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.4.0",
+    "@tsconfig/strictest": "^1.0.2",
+    "autoprefixer": "^10.4.13",
+    "eslint": "^8.27.0",
+    "eslint-config-nirtamir2": "^0.0.35",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "postcss": "^8.4.18",
+    "prettier": "^2.7.1",
+    "prettier-plugin-packagejson": "^2.3.0",
+    "prettier-plugin-tailwindcss": "^0.1.13",
+    "prisma": "^4.5.0",
+    "solid-start-node": "^0.2.1",
+    "solid-start-vercel": "^0.2.5",
+    "tailwindcss": "^3.2.2",
+    "typescript": "^4.8.3",
+    "vite": "^3.2.3"
   },
   "engines": {
     "node": ">=16"

@@ -1,7 +1,7 @@
-import { initTRPC, TRPCError } from "@trpc/server";
-import { IContext } from "./context";
+import { TRPCError, initTRPC } from "@trpc/server";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
+import type { IContext } from "./context";
 
 const ratelimit = new Ratelimit({
   redis: Redis.fromEnv(),
@@ -28,8 +28,8 @@ const withRateLimit = t.middleware(async ({ ctx, next }) => {
       ).getDate()} seconds`,
     });
   }
-  return next({ ctx });
+  return await next({ ctx });
 });
 
-export const router = t.router;
+export const {router} = t;
 export const procedure = t.procedure.use(withRateLimit);
