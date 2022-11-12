@@ -4,6 +4,7 @@
   "scripts": {
     "build": "solid-start build",
     "postbuild": "cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
+    "vercel-build": "solid-start build && cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
     "dev": "solid-start dev",
     "format": "prettier \"**/*\" --write --ignore-unknown",
     "generate": "prisma generate",
