@@ -22,7 +22,6 @@
     "@prisma/client": "^4.6.1",
     "@solidjs/meta": "^0.28.0",
     "@solidjs/router": "^0.5.0",
-    "@tanstack/solid-query": "^4.15.0",
     "@trpc/client": "10.0.0-rc.7",
     "@trpc/server": "10.0.0-rc.7",
     "@upstash/ratelimit": "^0.1.5",

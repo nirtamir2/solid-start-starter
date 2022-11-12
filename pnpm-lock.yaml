@@ -4,7 +4,6 @@ specifiers:
   '@prisma/client': ^4.6.1
   '@solidjs/meta': ^0.28.0
   '@solidjs/router': ^0.5.0
-  '@tanstack/solid-query': ^4.15.0
   '@trivago/prettier-plugin-sort-imports': ^3.4.0
   '@trpc/client': 10.0.0-rc.7
   '@trpc/server': 10.0.0-rc.7
@@ -37,7 +36,6 @@ dependencies:
   '@prisma/client': 4.6.1_prisma@4.6.1
   '@solidjs/meta': 0.28.2_solid-js@1.6.2
   '@solidjs/router': 0.5.0_solid-js@1.6.2
-  '@tanstack/solid-query': 4.15.0_solid-js@1.6.2
   '@trpc/client': 10.0.0-rc.7_@trpc+server@10.0.0-rc.7
   '@trpc/server': 10.0.0-rc.7
   '@upstash/ratelimit': 0.1.5_@upstash+redis@1.16.0
@@ -1573,19 +1571,6 @@ packages:
     dependencies:
       lodash: 4.17.21
     dev: true
-
-  /@tanstack/query-core/4.15.0:
-    resolution: {integrity: sha512-zEZ7AuQRb8Ts+WXw9TtGtqydxmcOSRsWkFYxxH8dykPcumsV49BcNDLhHtYqVGPQpMjqMS4RoVYQP+budT6WbA==}
-    dev: false
-
-  /@tanstack/solid-query/4.15.0_solid-js@1.6.2:
-    resolution: {integrity: sha512-J0ZKQLqeCbGkHWLfKm/Y5UWDaMvTsa1qlkoNeMQZ5mMEgvLzjKj0jPTMkhxHbV2xmEtcMYpLEj4DudUjU9IlSg==}
-    peerDependencies:
-      solid-js: ^1.5.7
-    dependencies:
-      '@tanstack/query-core': 4.15.0
-      solid-js: 1.6.2
-    dev: false
 
   /@trivago/prettier-plugin-sort-imports/3.4.0_prettier@2.7.1:
     resolution: {integrity: sha512-485Iailw8X5f7KetzRka20RF1kPBEINR5LJMNwlBZWY1gRAlVnv5dZzyNPnLxSP0Qcia8HETa9Cdd8LlX9o+pg==}
