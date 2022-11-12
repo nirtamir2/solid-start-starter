@@ -8,7 +8,7 @@
     "dev": "solid-start dev",
     "format": "prettier \"**/*\" --write --ignore-unknown",
     "generate": "prisma generate",
-    "postinstall": "node add-ts-nocheck.cjs",
+    "postinstall": "prisma generate && node add-ts-nocheck.cjs",
     "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx}\"",
     "prepare": "husky install",
     "push": "prisma db push",
