@@ -1,28 +1,12 @@
-import { createSignal } from "solid-js";
 import type { RouteDataArgs } from "solid-start";
 import { createRouteData, useRouteData } from "solid-start";
+import { Counter } from "~/components/Counter";
 import { client } from "~/utils/trpc";
 
 export function routeData(_: RouteDataArgs) {
   return createRouteData(async () => {
     return await client.hello.query({ name: "Nir" });
   });
-}
-
-function Counter() {
-  const [count, setCount] = createSignal(0);
-
-  return (
-    <button
-      class="border bg-gray-300 p-5"
-      type="button"
-      onClick={() => {
-        setCount(count() + 1);
-      }}
-    >
-      {count()}
-    </button>
-  );
 }
 
 export default function Home() {

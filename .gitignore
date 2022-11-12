@@ -22,4 +22,5 @@ gitignore
 .DS_Store
 Thumbs.db
 
+.eslintcache
 .env
