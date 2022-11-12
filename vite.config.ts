@@ -13,7 +13,6 @@ export default defineConfig(() => {
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
       devtools({ name: true }),
       solid({
-        ssr: false,
         // TODO: set island flags for better performance when they will work well with signals
         // islands: true,
         // islandsRouter: true,
