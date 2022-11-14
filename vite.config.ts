@@ -11,14 +11,15 @@ export default defineConfig(() => {
   return {
     plugins: [
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      devtools({ name: true }),
+      devtools(),
       solid({
-        // TODO: set island flags for better performance when they will work well with signals
+        // You can use island mode by uncomment those lines
+
         // islands: true,
         // islandsRouter: true,
 
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call
-        adapter: vercel({ edge: false }),
+        adapter: vercel(),
       }),
     ],
   };
