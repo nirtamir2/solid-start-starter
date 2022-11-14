@@ -1,43 +1,23 @@
 # Create JD App
 
-This project was created using [Create JD App](https://github.com/OrJDev/create-jd-app)
+This project was created using [Create JD App](https://github.com/OrJDev/create-jd-app).
 
-# Deploying
+It's a minimal opinionated solid-start starter that includes:
 
-### Vercel Adapter (or any other adapter)
+- [SolidStart](https://github.com/solidjs/solid-start)
+- [Prisma](https://github.com/prisma/prisma)
+- [tRPC](https://github.com/trpc/trpc)
+- [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
+- [Upstash Ratelimit](https://github.com/upstash/ratelimit)
+- Deployment to [Vercel](https://vercel.com/)
+- [pnpm](https://pnpm.io/) package manager
+- [solid-devtools](https://github.com/thetarnav/solid-devtools) integration for webstorm (you can change to `targetIDE` to `vscode`)
+- ESLint configured for solid-start
+- Prettier configuration
+- Pre-commit hooks with husky and lint-staged
 
-#### Installing
-
-```bash
-npm install -D solid-start-vercel@latest
-```
-
-#### Adding to vite config
-
-```ts
-import dotenv from "dotenv";
-// @ts-ignore
-import vercel from "solid-start-vercel";
-import solid from "solid-start/vite";
-import { defineConfig } from "vite";
-
-export default defineConfig(() => {
-  dotenv.config();
-  return {
-    plugins: [solid({ ssr: false, adapter: vercel({ edge: false }) })],
-  };
-});
-```
-
-### Enviroment Variables
+### Environment Variables
 
 - `ENABLE_VC_BUILD` set to `1` .
-- If you are using prisma: `DATABASE_URL` set to your `database url`.
-
-### In Case You Are Using Prisma
-
-i created a script that will copy prisma schema to the vercel output folder, if you are using different service please modify the `postbuild` script in `package.json` and make sure you copy the scheme to the output folder.
-
-### You Are Done
-
-Create a github repo and push your code to it, then deploy it to vercel (:
+- Prisma: `DATABASE_URL` set to your `database url`.
+- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` from [Upstash Ratelimit](https://github.com/upstash/ratelimit)
