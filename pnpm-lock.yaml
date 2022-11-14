@@ -13,7 +13,7 @@ specifiers:
   autoprefixer: ^10.4.13
   dotenv: ^16.0.3
   eslint: ^8.27.0
-  eslint-config-nirtamir2: ^0.0.35
+  eslint-config-nirtamir2: ^0.0.41
   husky: ^8.0.2
   lint-staged: ^13.0.3
   postcss: ^8.4.19
@@ -54,7 +54,7 @@ devDependencies:
   '@tsconfig/strictest': 1.0.2
   autoprefixer: 10.4.13_postcss@8.4.19
   eslint: 8.27.0
-  eslint-config-nirtamir2: 0.0.35_rmayb2veg2btbq6mbmnyivgasy
+  eslint-config-nirtamir2: 0.0.41_rmayb2veg2btbq6mbmnyivgasy
   husky: 8.0.2
   lint-staged: 13.0.3
   postcss: 8.4.19
@@ -76,6 +76,15 @@ packages:
     dependencies:
       '@jridgewell/gen-mapping': 0.1.1
       '@jridgewell/trace-mapping': 0.3.17
+
+  /@annangela/eslint-plugin/1.1.2_eslint@8.27.0:
+    resolution: {integrity: sha512-liO1DuR+PYUyyfzh4yOWQZ8x3OQ75YFhd/OB1eqFDNGfojmgqEjD9obPkceycohRHoGmXY8YyPLq5rprWEzCGg==}
+    engines: {node: ^16.18.0 || ^18.12.0}
+    peerDependencies:
+      eslint: '>=7'
+    dependencies:
+      eslint: 8.27.0
+    dev: true
 
   /@babel/code-frame/7.18.6:
     resolution: {integrity: sha512-TDCmlK5eOvH+eH7cdAFlNXeVJqWIQ7gW9tY1GJIpUtFb6CmjVyq2VM3u71bOyR8CRihcCgMUYoDNyLXao3+70Q==}
@@ -3284,12 +3293,13 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-config-nirtamir2/0.0.35_rmayb2veg2btbq6mbmnyivgasy:
-    resolution: {integrity: sha512-x/lWKGWUHgTB0vwVMBAsW7cbdwWXnvRFTyt9drwsfWVU1oL2dhq8NLpVeM7Fk0bHFeqB5Bj/VhbMFiL5l5+NkQ==}
+  /eslint-config-nirtamir2/0.0.41_rmayb2veg2btbq6mbmnyivgasy:
+    resolution: {integrity: sha512-NK/09d8mZy+ZXUJ8X2QLtLzI6evMVd3umhP1PiGJQIWNjXqYW+S33h0We/POGuwk4PWfMI8kjKTXYPiYnbnVLQ==}
     peerDependencies:
       eslint: ^8.15.0
       typescript: ^4.6.4
     dependencies:
+      '@annangela/eslint-plugin': 1.1.2_eslint@8.27.0
       '@rushstack/eslint-patch': 1.2.0
       '@typescript-eslint/eslint-plugin': 5.42.1_2udltptbznfmezdozpdoa2aemq
       '@typescript-eslint/parser': 5.42.1_rmayb2veg2btbq6mbmnyivgasy

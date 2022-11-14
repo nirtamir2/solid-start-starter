@@ -2,7 +2,7 @@
   "name": "solid-start-starter",
   "type": "module",
   "scripts": {
-    "build": "solid-start build",
+    "build": "solid-start build && pnpm run postbuild",
     "postbuild": "cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
     "dev": "solid-start dev",
     "format": "prettier \"**/*\" --write --ignore-unknown",
@@ -38,7 +38,7 @@
     "@tsconfig/strictest": "^1.0.2",
     "autoprefixer": "^10.4.13",
     "eslint": "^8.27.0",
-    "eslint-config-nirtamir2": "^0.0.35",
+    "eslint-config-nirtamir2": "^0.0.41",
     "husky": "^8.0.2",
     "lint-staged": "^13.0.3",
     "postcss": "^8.4.19",
