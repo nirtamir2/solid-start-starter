@@ -5,7 +5,7 @@ export function Counter() {
 
   return (
     <button
-      class="border bg-gray-300 p-5"
+      class="border rounded bg-gray-100 p-5 hover:bg-gray-200 focus:bg-gray-200 active:translate-y-[1px]"
       type="button"
       onClick={() => {
         setCount(count() + 1);
