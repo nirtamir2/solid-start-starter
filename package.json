@@ -4,14 +4,12 @@
   "scripts": {
     "build": "solid-start build",
     "postbuild": "cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
-    "vercel-build": "solid-start build && cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
     "dev": "solid-start dev",
     "format": "prettier \"**/*\" --write --ignore-unknown",
-    "generate": "prisma generate",
     "postinstall": "prisma generate && node add-ts-nocheck.cjs",
     "lint": "eslint --fix \"**/*.{ts,tsx,js,jsx}\"",
     "prepare": "husky install",
-    "push": "prisma db push",
+    "prisma-push": "prisma db push",
     "start": "solid-start start",
     "type-check": "tsc --noEmit"
   },
