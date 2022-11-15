@@ -1,5 +1,24 @@
 {
   "name": "solid-start-starter",
+  "version": "0.0.0",
+  "private": false,
+  "description": "SolidJS project starter template with TypeScript, ESLint, TailwindCSS, tRPC and Prisma",
+  "keywords": [
+    "solid",
+    "template",
+    "solid-start",
+    "solidjs"
+  ],
+  "homepage": "https://github.com/nirtamir2/solid-start-starter#readme",
+  "bugs": {
+    "url": "https://github.com/nirtamir2/solid-start-starter/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nirtamir2/solid-start-starter.git"
+  },
+  "license": "MIT",
+  "author": "nirtamir2",
   "type": "module",
   "scripts": {
     "build": "solid-start build && pnpm run postbuild",
