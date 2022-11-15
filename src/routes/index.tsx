@@ -1,6 +1,9 @@
+import { A } from "@solidjs/router";
 import { Suspense } from "solid-js";
 import type { RouteDataArgs } from "solid-start";
 import { createRouteData, useRouteData } from "solid-start";
+import GithubIcon from "~/assets/github.svg";
+import SolidIcon from "~/assets/solid.svg";
 import { Counter } from "~/components/Counter";
 import { client } from "~/utils/trpc";
 
@@ -23,7 +26,15 @@ export default function Home() {
           {greeting()}
         </div>
       </Suspense>
+      <SolidIcon height={200} width={200} />
       <Counter />
+      <A
+        href="https://github.com/nirtamir2/solid-start-starter"
+        class="flex items-center gap-2 text-gray-500"
+      >
+        <GithubIcon height={24} width={24} />
+        <span>solid-start-starter</span>
+      </A>
     </div>
   );
 }

@@ -11,6 +11,7 @@ It's a minimal opinionated solid-start starter that includes:
 - [Upstash Ratelimit](https://github.com/upstash/ratelimit)
 - Deployment to [Vercel](https://vercel.com/)
 - [pnpm](https://pnpm.io/) package manager
+- [vite-plugin-solid-svg](https://github.com/jfgodoy/vite-plugin-solid-svg) for loading svg files as components
 - [solid-devtools](https://github.com/thetarnav/solid-devtools) integration for webstorm (you can change to `targetIDE` to `vscode`)
 - ESLint configured for solid-start
 - Prettier configuration

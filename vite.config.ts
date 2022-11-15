@@ -5,13 +5,14 @@ import devtools from "solid-devtools/vite";
 import vercel from "solid-start-vercel";
 import solid from "solid-start/vite";
 import { defineConfig } from "vite";
+import solidSvg from "vite-plugin-solid-svg";
 
 export default defineConfig(() => {
   dotenv.config();
   return {
     plugins: [
       // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      devtools(),
+      devtools({ name: true }),
       solid({
         /**
          * You can use island mode by uncomment those lines
@@ -23,6 +24,9 @@ export default defineConfig(() => {
 
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call
         adapter: vercel(),
+      }),
+      solidSvg({
+        defaultAsComponent: true,
       }),
     ],
   };
