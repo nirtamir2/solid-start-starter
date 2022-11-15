@@ -1,6 +1,10 @@
+<p>
+  <img width="100%" src="https://assets.solidjs.com/banner?type=Solid Start Starter&background=tiles&project=%20" alt="Solid Start Starter">
+</p>
+
 # Solid Start Starter
 
-This project was created using [Create JD App](https://github.com/OrJDev/create-jd-app).
+[![pnpm](https://img.shields.io/badge/maintained%20with-pnpm-cc00ff.svg?style=for-the-badge&logo=pnpm)](https://pnpm.io/)
 
 It's a minimal opinionated solid-start starter that includes:
 
@@ -22,3 +26,8 @@ It's a minimal opinionated solid-start starter that includes:
 - `ENABLE_VC_BUILD` set to `1` .
 - Prisma: `DATABASE_URL` set to your `database url`.
 - `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` from [Upstash Ratelimit](https://github.com/upstash/ratelimit)
+
+## Similar projects
+
+- [Create JD App](https://github.com/OrJDev/create-jd-app).
+- [solid.new](https://github.com/solidjs-community/solid.new).
