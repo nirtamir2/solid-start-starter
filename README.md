@@ -29,5 +29,5 @@ It's a minimal opinionated solid-start starter that includes:
 
 ## Similar projects
 
-- [Create JD App](https://github.com/OrJDev/create-jd-app).
-- [solid.new](https://github.com/solidjs-community/solid.new).
+- [Create JD App](https://github.com/OrJDev/create-jd-app)
+- [solid.new](https://github.com/solidjs-community/solid.new)
