@@ -46,7 +46,7 @@ const FILES = [
   "node_modules/solid-start/server/ServerContext.tsx",
   "node_modules/solid-start/session/cookie.ts",
   "node_modules/solid-start/session/cookies.ts",
-  "node_modules/solid-start/server/server-functions/types.ts"
+  "node_modules/solid-start/server/server-functions/types.ts",
 ];
 
 Promise.allSettled(FILES.map(addTsNoCheck)).then((results) => {

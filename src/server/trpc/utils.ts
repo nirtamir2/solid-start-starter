@@ -31,5 +31,5 @@ const withRateLimit = t.middleware(async ({ ctx, next }) => {
   return await next({ ctx });
 });
 
-export const {router} = t;
+export const { router } = t;
 export const procedure = t.procedure.use(withRateLimit);
