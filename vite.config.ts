@@ -17,7 +17,10 @@ export default defineConfig(() => {
         /**
          * You can use island mode by uncomment those lines
          * But notice that you need to wrap you island interactive components like
+         *
+         * ```tsx
          * const Counter = unstable_island(() => import("../components/Counter"));
+         * ```
          */
         // islands: true,
         // islandsRouter: true,
