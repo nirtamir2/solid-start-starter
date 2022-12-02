@@ -1,0 +1,23 @@
+{
+  "title": "solid-start-starter-auth",
+  "Home": {
+    "title": "מערכת שעות",
+    "loading": "טוען...",
+    "not_found": "לא נמצאו שיעורים ליום זה",
+    "last_week": "שבוע שעבר",
+    "next_week": "שבוע הבא",
+    "loading_new_route": "שולף נתונים חדשים"
+  },
+  "TrainingLesson": {
+    "register": "הרשמה"
+  },
+  "UserLayout": {
+    "loading": "טוען...",
+    "no_user": "יוזר לא מחובר"
+  },
+  "Login": {
+    "title": "התחברות",
+    "sign_in_with_google": "התחברות עם גוגל",
+    "loading": "טוען"
+  }
+}

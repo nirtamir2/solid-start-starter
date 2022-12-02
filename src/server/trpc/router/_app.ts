@@ -1,7 +1,8 @@
+import { calendarRouter } from "~/server/trpc/router/calendarRouter";
 import { t } from "../utils";
-import exampleRouter from "./example";
-import notesRouter from "./notes";
 
-export const appRouter = t.mergeRouters(exampleRouter, notesRouter);
+export const appRouter = t.router({
+  app: calendarRouter,
+});
 
 export type IAppRouter = typeof appRouter;

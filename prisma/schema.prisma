@@ -13,3 +13,10 @@ model Notes {
   id   String @id @default(cuid())
   text String
 }
+
+model User {
+  id             String          @id @default(cuid())
+  displayName    String
+  picture        String
+  isVerified     Boolean
+}

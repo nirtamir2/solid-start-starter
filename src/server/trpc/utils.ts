@@ -1,6 +1,7 @@
 import { TRPCError, initTRPC } from "@trpc/server";
 import { Ratelimit } from "@upstash/ratelimit";
 import { Redis } from "@upstash/redis";
+import { authenticator } from "~/server/auth/authenticator";
 import type { IContext } from "./context";
 
 const ratelimit = new Ratelimit({
@@ -32,4 +33,20 @@ const withRateLimit = t.middleware(async ({ ctx, next }) => {
 });
 
 export const { router } = t;
+
 export const procedure = t.procedure.use(withRateLimit);
+
+// eslint-disable-next-line import/no-unused-modules
+export const protectedProcedure = procedure.use(
+  t.middleware(async ({ ctx, next }) => {
+    const user = await authenticator.isAuthenticated(ctx.req);
+    if (user == null) {
+      throw new TRPCError({
+        code: "UNAUTHORIZED",
+        message: "You are not authorized to access this resource",
+      });
+    }
+
+    return await next({ ctx: { ...ctx, user } });
+  })
+);
