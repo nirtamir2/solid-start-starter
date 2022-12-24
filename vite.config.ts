@@ -11,8 +11,7 @@ export default defineConfig(() => {
   dotenv.config();
   return {
     plugins: [
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call
-      devtools({ name: true }),
+      devtools({ autoname: true }),
       solid({
         /**
          * You can use island mode by uncomment those lines
