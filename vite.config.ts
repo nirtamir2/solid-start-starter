@@ -1,4 +1,3 @@
-import dotenv from "dotenv";
 import devtools from "solid-devtools/vite";
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-expect-error
@@ -8,7 +7,6 @@ import { defineConfig } from "vite";
 import solidSvg from "vite-plugin-solid-svg";
 
 export default defineConfig(() => {
-  dotenv.config();
   return {
     plugins: [
       devtools({ autoname: true }),
