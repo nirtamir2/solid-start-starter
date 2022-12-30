@@ -21,16 +21,15 @@
   "author": "nirtamir2",
   "type": "module",
   "scripts": {
-    "a": "node a.js",
     "build": "solid-start build && pnpm run postbuild",
     "postbuild": "cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
     "dev": "solid-start dev",
     "format": "prettier \"**/*\" --write --ignore-unknown",
+    "routes:generate": "routes-gen -d driver.cjs",
     "postinstall": "prisma generate && node add-ts-nocheck.cjs",
     "lint": "eslint --max-warnings 0 --fix \"**/*.{ts,tsx,js,jsx}\"",
     "prepare": "husky install",
     "prisma-push": "prisma db push",
-    "generate:routes": "routes-gen -d driver.cjs",
     "start": "solid-start start",
     "type-check": "tsc --noEmit"
   },
