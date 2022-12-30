@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 patchedDependencies:
   solid-start@0.2.9:
-    hash: nm6ktbu5q3pucyuuf32v4dd35e
+    hash: zasalnpncqzmemj2tviyf236fm
     path: patches/solid-start@0.2.9.patch
 
 specifiers:
@@ -50,7 +50,7 @@ dependencies:
   routes-gen: 0.5.2
   solid-devtools: 0.24.5_solid-js@1.6.6+vite@4.0.3
   solid-js: 1.6.6
-  solid-start: 0.2.9_nm6ktbu5q3pucyuuf32v4dd35e_kao6przsv5ql3q4f4c3i67jucm
+  solid-start: 0.2.9_zasalnpncqzmemj2tviyf236fm_kao6przsv5ql3q4f4c3i67jucm
   solid-start-trpc: 0.0.16_xum7uup453oo2kdjjlkf3py2ii
   undici: 5.14.0
   zod: 3.20.2
@@ -6310,7 +6310,7 @@ packages:
       polka: 1.0.0-next.22
       rollup: 2.79.1
       sirv: 2.0.2
-      solid-start: 0.2.9_nm6ktbu5q3pucyuuf32v4dd35e_kao6przsv5ql3q4f4c3i67jucm
+      solid-start: 0.2.9_zasalnpncqzmemj2tviyf236fm_kao6przsv5ql3q4f4c3i67jucm
       terser: 5.16.1
       undici: 5.14.0
       vite: 4.0.3
@@ -6329,7 +6329,7 @@ packages:
       '@trpc/client': 10.7.0_@trpc+server@10.7.0
       '@trpc/server': 10.7.0
       solid-js: 1.6.6
-      solid-start: 0.2.9_nm6ktbu5q3pucyuuf32v4dd35e_kao6przsv5ql3q4f4c3i67jucm
+      solid-start: 0.2.9_zasalnpncqzmemj2tviyf236fm_kao6przsv5ql3q4f4c3i67jucm
     dev: false
 
   /solid-start-vercel/0.2.9_c4jszhx5pex7d4ob4c4rfufj2m:
@@ -6342,12 +6342,12 @@ packages:
       '@rollup/plugin-json': 4.1.0_rollup@2.79.1
       '@rollup/plugin-node-resolve': 13.3.0_rollup@2.79.1
       rollup: 2.79.1
-      solid-start: 0.2.9_nm6ktbu5q3pucyuuf32v4dd35e_kao6przsv5ql3q4f4c3i67jucm
+      solid-start: 0.2.9_zasalnpncqzmemj2tviyf236fm_kao6przsv5ql3q4f4c3i67jucm
       terser: 5.16.1
       vite: 4.0.3
     dev: true
 
-  /solid-start/0.2.9_nm6ktbu5q3pucyuuf32v4dd35e_kao6przsv5ql3q4f4c3i67jucm:
+  /solid-start/0.2.9_zasalnpncqzmemj2tviyf236fm_kao6przsv5ql3q4f4c3i67jucm:
     resolution: {integrity: sha512-t8wxOMvrbT6MGfWYQctD+f0O4KqFxI9zb4Bpj8JucFoHKkWboMYrIpXB0ll/GB3U6hXyxhAi589UwfqcgNrKOw==}
     hasBin: true
     peerDependencies:
