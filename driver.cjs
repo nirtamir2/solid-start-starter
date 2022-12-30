@@ -8,13 +8,9 @@ const watchPaths = async () => [
 const routes = async () => {
   const scriptPath = path.join(__dirname, 'node_modules', 'solid-start', 'bin.cjs');
   const parsedRoutes = await new Promise(async (resolve) => {
-    exec(`node ${scriptPath} routes`, (error, stdout, stderr) => {
+    exec(`node ${scriptPath} routes`, (error, stdout) => {
       if (error != null) {
         console.error("error", error);
-        return;
-      }
-      if(stderr != null){
-        console.error("stderr", stderr);
         return;
       }
       const routes = JSON.parse(stdout);
