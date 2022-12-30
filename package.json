@@ -30,7 +30,9 @@
     "prepare": "husky install",
     "prisma-push": "prisma db push",
     "start": "solid-start start",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "routes-gen": "routes-gen -d driver.cjs",
+    "a": "node a.js"
   },
   "lint-staged": {
     "*.{ts,tsx,md}": "eslint --cache --fix",
@@ -44,9 +46,10 @@
     "@trpc/server": "10.7.0",
     "@upstash/ratelimit": "^0.1.5",
     "@upstash/redis": "^1.18.4",
+    "routes-gen": "^0.5.2",
     "solid-devtools": "^0.24.5",
     "solid-js": "^1.6.6",
-    "solid-start": "^0.2.9",
+    "solid-start": "../solid-start/packages/start",
     "solid-start-trpc": "^0.0.16",
     "undici": "5.14.0",
     "zod": "^3.20.2"
