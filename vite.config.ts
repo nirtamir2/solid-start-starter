@@ -9,7 +9,14 @@ import solidSvg from "vite-plugin-solid-svg";
 export default defineConfig(() => {
   return {
     plugins: [
-      devtools({ autoname: true }),
+      devtools({
+        autoname: true,
+        locator: {
+          componentLocation: true,
+          jsxLocation: true,
+          targetIDE: "webstorm",
+        },
+      }),
       solid({
         /**
          * You can use island mode by uncomment those lines
