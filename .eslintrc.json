@@ -14,6 +14,13 @@
       "rules": {
         "import/no-unused-modules": "off"
       }
+    },
+    {
+      "files": ["src/routes.d.ts"],
+      "rules": {
+        "etc/prefer-interface": "off",
+        "etc/no-misused-generics": "off"
+      }
     }
   ]
 }

@@ -30,13 +30,15 @@
     "prepare": "husky install",
     "prisma-push": "prisma db push",
     "start": "solid-start start",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "routes": "routes-gen -d @nirtamir2/routes-gen-solid-start"
   },
   "lint-staged": {
     "*.{ts,tsx,md}": "eslint --cache --fix",
     "*.{ts,tsx,css,html,md}": "prettier --write"
   },
   "dependencies": {
+    "@nirtamir2/routes-gen-solid-start": "^0.0.5",
     "@prisma/client": "^4.8.0",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.6.0",
@@ -44,6 +46,7 @@
     "@trpc/server": "10.7.0",
     "@upstash/ratelimit": "^0.1.5",
     "@upstash/redis": "^1.18.5",
+    "routes-gen": "^0.5.2",
     "solid-devtools": "^0.24.7",
     "solid-js": "^1.6.6",
     "solid-start": "^0.2.10",
