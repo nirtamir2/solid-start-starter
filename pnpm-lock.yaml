@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@nirtamir2/routes-gen-solid-start': ^0.0.5
+  '@nirtamir2/routes-gen-solid-start': ^0.0.6
   '@prisma/client': ^4.8.0
   '@solidjs/meta': ^0.28.2
   '@solidjs/router': ^0.6.0
@@ -36,7 +36,7 @@ specifiers:
   zod: ^3.20.2
 
 dependencies:
-  '@nirtamir2/routes-gen-solid-start': 0.0.5_v7gknouvrmplot4on7hclv5dze
+  '@nirtamir2/routes-gen-solid-start': 0.0.6_v7gknouvrmplot4on7hclv5dze
   '@prisma/client': 4.8.0_prisma@4.8.0
   '@solidjs/meta': 0.28.2_solid-js@1.6.6
   '@solidjs/router': 0.6.0_solid-js@1.6.6
@@ -1619,8 +1619,8 @@ packages:
       glob: 7.1.7
     dev: true
 
-  /@nirtamir2/routes-gen-solid-start/0.0.5_v7gknouvrmplot4on7hclv5dze:
-    resolution: {integrity: sha512-jp3wqRUH1LFcvK2VKwbyxQmal9Ui9DN0ssWWPA/mlbLSqfQsGVRz/N3MCO4MDoAMMUWykRmEq1dTqtqI6VBI2w==}
+  /@nirtamir2/routes-gen-solid-start/0.0.6_v7gknouvrmplot4on7hclv5dze:
+    resolution: {integrity: sha512-yDoCEx3QyOGQZS+tYLv8j4HU/ywbsZG0jDfq0DoORJ9622r20iI8dg+NOHbS1GoLISTq7bkZFBogT0nE+n/V0Q==}
     dependencies:
       routes-gen: 0.5.2
       solid-start: 0.2.10_v7gknouvrmplot4on7hclv5dze

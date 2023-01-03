@@ -29,16 +29,17 @@
     "lint": "eslint --max-warnings 0 --fix \"**/*.{ts,tsx,js,jsx}\"",
     "prepare": "husky install",
     "prisma-push": "prisma db push",
+    "routes-generate": "routes-gen -d @nirtamir2/routes-gen-solid-start",
     "start": "solid-start start",
-    "type-check": "tsc --noEmit",
-    "routes": "routes-gen -d @nirtamir2/routes-gen-solid-start"
+    "type-check": "tsc --noEmit"
   },
   "lint-staged": {
+    "src/routes/*.{tsx}": "pnpm routes-generate",
     "*.{ts,tsx,md}": "eslint --cache --fix",
     "*.{ts,tsx,css,html,md}": "prettier --write"
   },
   "dependencies": {
-    "@nirtamir2/routes-gen-solid-start": "^0.0.5",
+    "@nirtamir2/routes-gen-solid-start": "^0.0.6",
     "@prisma/client": "^4.8.0",
     "@solidjs/meta": "^0.28.2",
     "@solidjs/router": "^0.6.0",
