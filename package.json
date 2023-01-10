@@ -22,7 +22,7 @@
   "type": "module",
   "scripts": {
     "build": "solid-start build && pnpm run postbuild",
-    "postbuild": "cp node_modules/@prisma/engines/*query* .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
+    "postbuild": "cp node_modules/.pnpm/**/**/prisma/*engine*.node .vercel/output/functions/render.func/ && cp prisma/schema.prisma .vercel/output/functions/render.func/",
     "dev": "solid-start dev",
     "format": "prettier \"**/*\" --write --ignore-unknown",
     "postinstall": "prisma generate && node add-ts-nocheck.cjs",
