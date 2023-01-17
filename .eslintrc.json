@@ -14,6 +14,14 @@
       "rules": {
         "import/no-unused-modules": "off"
       }
+    },
+    {
+      "files": ["routes.d.ts"],
+      "rules": {
+        "etc/no-misused-generics": "off",
+        "etc/prefer-interface": "off",
+        "@typescript-eslint/sort-type-union-intersection-members": "off"
+      }
     }
   ]
 }
