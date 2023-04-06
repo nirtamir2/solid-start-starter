@@ -11,6 +11,7 @@ import {
   Scripts,
   Title,
 } from "solid-start";
+import { queryClient, trpc } from "~/utils/trpc";
 import "./root.css";
 
 export default function Root() {
@@ -22,14 +23,16 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Body>
-        <Suspense>
-          <ErrorBoundary>
-            <Routes>
-              <FileRoutes />
-            </Routes>
-          </ErrorBoundary>
-        </Suspense>
-        <Scripts />
+        <trpc.Provider queryClient={queryClient}>
+          <Suspense>
+            <ErrorBoundary>
+              <Routes>
+                <FileRoutes />
+              </Routes>
+            </ErrorBoundary>
+          </Suspense>
+          <Scripts />
+        </trpc.Provider>
       </Body>
     </Html>
   );

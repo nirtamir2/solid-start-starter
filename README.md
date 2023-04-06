@@ -11,6 +11,7 @@ It's a minimal opinionated solid-start starter that includes:
 - [SolidStart](https://github.com/solidjs/solid-start)
 - [Prisma](https://github.com/prisma/prisma)
 - [tRPC](https://github.com/trpc/trpc)
+- [@tanstack/query](https://tanstack.com/query)
 - [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
 - Deployment to [Vercel](https://vercel.com/)
 - [pnpm](https://pnpm.io/) package manager
