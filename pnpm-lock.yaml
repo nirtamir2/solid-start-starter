@@ -13,6 +13,9 @@ dependencies:
   '@solidjs/router':
     specifier: ^0.8.2
     version: 0.8.2(solid-js@1.7.2)
+  '@tanstack/solid-query':
+    specifier: ^5.0.0-alpha.16
+    version: 5.0.0-alpha.16(solid-js@1.7.2)
   '@trpc/client':
     specifier: 10.18.0
     version: 10.18.0(@trpc/server@10.18.0)
@@ -34,6 +37,9 @@ dependencies:
   solid-start-trpc:
     specifier: ^0.0.16
     version: 0.0.16(@trpc/client@10.18.0)(@trpc/server@10.18.0)(solid-js@1.7.2)(solid-start@0.2.26)
+  solid-trpc:
+    specifier: 0.1.0-sssr.7
+    version: 0.1.0-sssr.7(@tanstack/solid-query@5.0.0-alpha.16)(@trpc/client@10.18.0)(@trpc/server@10.18.0)(solid-js@1.7.2)(solid-start@0.2.26)
   undici:
     specifier: 5.21.0
     version: 5.21.0
@@ -1988,6 +1994,19 @@ packages:
   /@tanstack/eslint-plugin-query@4.29.0:
     resolution: {integrity: sha512-ex+rigzAetqW7vjFA0rqszgPHltI0nbNlsFki4+1b9Kg8Tu6gSSl0M8LJGSvjfnOHsDL5ET3lHHWj+dirdfq5w==}
     dev: true
+
+  /@tanstack/query-core@5.0.0-alpha.12:
+    resolution: {integrity: sha512-kd53UD6pasczOQ0Y+59Ku0Ep3W+7qjjhxnn2PGIEqioqa4g27Vnt77yTb8SwrXQR92ugazGpjOsGylDtwh31QA==}
+    dev: false
+
+  /@tanstack/solid-query@5.0.0-alpha.16(solid-js@1.7.2):
+    resolution: {integrity: sha512-s7dYtB4tYkBuQjOYBcq9It9WOm11Bgrc9gFOGOfpxFWSZwyaccRBHZEqt8eyLGuZCFtFeN7i32PEGIe5hCmZnw==}
+    peerDependencies:
+      solid-js: ^1.6.13
+    dependencies:
+      '@tanstack/query-core': 5.0.0-alpha.12
+      solid-js: 1.7.2
+    dev: false
 
   /@trivago/prettier-plugin-sort-imports@4.1.1(prettier@2.8.7):
     resolution: {integrity: sha512-dQ2r2uzNr1x6pJsuh/8x0IRA3CBUB+pWEW3J/7N98axqt7SQSm+2fy0FLNXvXGg77xEDC7KHxJlHfLYyi7PDcw==}
@@ -6432,6 +6451,22 @@ packages:
       wait-on: 6.0.1(debug@4.3.4)
     transitivePeerDependencies:
       - supports-color
+
+  /solid-trpc@0.1.0-sssr.7(@tanstack/solid-query@5.0.0-alpha.16)(@trpc/client@10.18.0)(@trpc/server@10.18.0)(solid-js@1.7.2)(solid-start@0.2.26):
+    resolution: {integrity: sha512-N/iqU4iFIVEWKFjOY+5J4e2qbOW9STy/eEID1gEjj6mm0w9xYmQtKu/UsBNf8W6nSCYSBjH/ttU5fGCe/0q2Dw==}
+    peerDependencies:
+      '@tanstack/solid-query': ^5.0.0-alpha.0
+      '@trpc/client': ^10.0.0-rc.2
+      '@trpc/server': ^10.0.0-rc.2
+      solid-js: ^1.5.3
+      solid-start: ^0.2.1
+    dependencies:
+      '@tanstack/solid-query': 5.0.0-alpha.16(solid-js@1.7.2)
+      '@trpc/client': 10.18.0(@trpc/server@10.18.0)
+      '@trpc/server': 10.18.0
+      solid-js: 1.7.2
+      solid-start: 0.2.26(@solidjs/meta@0.28.4)(@solidjs/router@0.8.2)(solid-js@1.7.2)(solid-start-node@0.2.26)(solid-start-vercel@0.2.26)(vite@4.2.1)
+    dev: false
 
   /sort-object-keys@1.1.3:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
