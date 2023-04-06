@@ -12,6 +12,7 @@ It's a minimal opinionated solid-start starter that includes:
 - [Prisma](https://github.com/prisma/prisma)
 - [tRPC](https://github.com/trpc/trpc)
 - [TailwindCSS](https://github.com/tailwindlabs/tailwindcss)
+- [Upstash Ratelimit](https://github.com/upstash/ratelimit)
 - Deployment to [Vercel](https://vercel.com/)
 - [pnpm](https://pnpm.io/) package manager
 - [vite-plugin-solid-svg](https://github.com/jfgodoy/vite-plugin-solid-svg) for loading svg files as components
@@ -24,6 +25,7 @@ It's a minimal opinionated solid-start starter that includes:
 
 - `ENABLE_VC_BUILD` set to `1` .
 - Prisma: `DATABASE_URL` set to your `database url`.
+- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN` from [Upstash Ratelimit](https://github.com/upstash/ratelimit)
 
 ## Similar projects
 
