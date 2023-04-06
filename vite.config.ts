@@ -1,6 +1,4 @@
 import devtools from "solid-devtools/vite";
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
 import vercel from "solid-start-vercel";
 import solid from "solid-start/vite";
 import { defineConfig } from "vite";
@@ -29,8 +27,7 @@ export default defineConfig(() => {
         // islands: true,
         // islandsRouter: true,
 
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-call
-        adapter: vercel(),
+        adapter: vercel({}),
       }),
       solidSvg({
         defaultAsComponent: true,
