@@ -13,15 +13,18 @@ dependencies:
   '@solidjs/router':
     specifier: ^0.8.2
     version: 0.8.2(solid-js@1.7.2)
-  '@tanstack/solid-query':
-    specifier: ^5.0.0-alpha.16
-    version: 5.0.0-alpha.16(solid-js@1.7.2)
   '@trpc/client':
     specifier: 10.18.0
     version: 10.18.0(@trpc/server@10.18.0)
   '@trpc/server':
     specifier: 10.18.0
     version: 10.18.0
+  '@upstash/ratelimit':
+    specifier: ^0.4.1
+    version: 0.4.1(@upstash/redis@1.20.2)
+  '@upstash/redis':
+    specifier: ^1.20.2
+    version: 1.20.2
   routes-gen:
     specifier: ^0.6.0
     version: 0.6.0
@@ -37,9 +40,6 @@ dependencies:
   solid-start-trpc:
     specifier: ^0.0.16
     version: 0.0.16(@trpc/client@10.18.0)(@trpc/server@10.18.0)(solid-js@1.7.2)(solid-start@0.2.26)
-  solid-trpc:
-    specifier: 0.1.0-sssr.7
-    version: 0.1.0-sssr.7(@tanstack/solid-query@5.0.0-alpha.16)(@trpc/client@10.18.0)(@trpc/server@10.18.0)(solid-js@1.7.2)(solid-start@0.2.26)
   undici:
     specifier: 5.21.0
     version: 5.21.0
@@ -1995,19 +1995,6 @@ packages:
     resolution: {integrity: sha512-ex+rigzAetqW7vjFA0rqszgPHltI0nbNlsFki4+1b9Kg8Tu6gSSl0M8LJGSvjfnOHsDL5ET3lHHWj+dirdfq5w==}
     dev: true
 
-  /@tanstack/query-core@5.0.0-alpha.12:
-    resolution: {integrity: sha512-kd53UD6pasczOQ0Y+59Ku0Ep3W+7qjjhxnn2PGIEqioqa4g27Vnt77yTb8SwrXQR92ugazGpjOsGylDtwh31QA==}
-    dev: false
-
-  /@tanstack/solid-query@5.0.0-alpha.16(solid-js@1.7.2):
-    resolution: {integrity: sha512-s7dYtB4tYkBuQjOYBcq9It9WOm11Bgrc9gFOGOfpxFWSZwyaccRBHZEqt8eyLGuZCFtFeN7i32PEGIe5hCmZnw==}
-    peerDependencies:
-      solid-js: ^1.6.13
-    dependencies:
-      '@tanstack/query-core': 5.0.0-alpha.12
-      solid-js: 1.7.2
-    dev: false
-
   /@trivago/prettier-plugin-sort-imports@4.1.1(prettier@2.8.7):
     resolution: {integrity: sha512-dQ2r2uzNr1x6pJsuh/8x0IRA3CBUB+pWEW3J/7N98axqt7SQSm+2fy0FLNXvXGg77xEDC7KHxJlHfLYyi7PDcw==}
     peerDependencies:
@@ -2267,6 +2254,34 @@ packages:
       '@typescript-eslint/types': 5.57.1
       eslint-visitor-keys: 3.4.0
     dev: true
+
+  /@upstash/core-analytics@0.0.6:
+    resolution: {integrity: sha512-cpPSR0XJAJs4Ddz9nq3tINlPS5aLfWVCqhhtHnXt4p7qr5+/Znlt1Es736poB/9rnl1hAHrOsOvVj46NEXcVqA==}
+    engines: {node: '>=16.0.0'}
+    dependencies:
+      '@upstash/redis': 1.20.2
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@upstash/ratelimit@0.4.1(@upstash/redis@1.20.2):
+    resolution: {integrity: sha512-NdL4E8jOrqSIOuDFVx5TLdh0/2tefgnrzBeqx+soy1cjGnx8sKdCZpOi4xhG5rm6F9ch89ZzIcBm6iRhx+tLgA==}
+    peerDependencies:
+      '@upstash/redis': ^1.20.1
+    dependencies:
+      '@upstash/core-analytics': 0.0.6
+      '@upstash/redis': 1.20.2
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
+  /@upstash/redis@1.20.2:
+    resolution: {integrity: sha512-9QS/SypDxeeh672H7dEEmuYOX5TtPYnaDLlhxWJEPd8LzcEQ6hohwDJuojpqGkvvvrK58mlWOkN1GrMxbXPTeQ==}
+    dependencies:
+      isomorphic-fetch: 3.0.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
 
   /@vercel/nft@0.22.6:
     resolution: {integrity: sha512-gTsFnnT4mGxodr4AUlW3/urY+8JKKB452LwF3m477RFUJTAaDmcz2JqFuInzvdybYIeyIv1sSONEJxsxnbQ5JQ==}
@@ -4859,6 +4874,15 @@ packages:
     resolution: {integrity: sha512-RHxMLp9lnKHGHRng9QFhRCMbYAcVpn69smSGcq3f36xjgVVWThj4qqLbTLlq7Ssj8B+fIQ1EuCEGI2lKsyQeIw==}
     dev: true
 
+  /isomorphic-fetch@3.0.0:
+    resolution: {integrity: sha512-qvUtwJ3j6qwsF3jLxkZ72qCgjMysPzDfeV240JHiGZsANBYd+EEuu35v7dfrJ9Up0Ak07D7GGSkGhCHTqg/5wA==}
+    dependencies:
+      node-fetch: 2.6.9
+      whatwg-fetch: 3.6.2
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /javascript-natural-sort@0.7.1:
     resolution: {integrity: sha1-+eIwPUUH9tdDVac2ZNFED7Wg71k=}
     dev: true
@@ -6452,22 +6476,6 @@ packages:
     transitivePeerDependencies:
       - supports-color
 
-  /solid-trpc@0.1.0-sssr.7(@tanstack/solid-query@5.0.0-alpha.16)(@trpc/client@10.18.0)(@trpc/server@10.18.0)(solid-js@1.7.2)(solid-start@0.2.26):
-    resolution: {integrity: sha512-N/iqU4iFIVEWKFjOY+5J4e2qbOW9STy/eEID1gEjj6mm0w9xYmQtKu/UsBNf8W6nSCYSBjH/ttU5fGCe/0q2Dw==}
-    peerDependencies:
-      '@tanstack/solid-query': ^5.0.0-alpha.0
-      '@trpc/client': ^10.0.0-rc.2
-      '@trpc/server': ^10.0.0-rc.2
-      solid-js: ^1.5.3
-      solid-start: ^0.2.1
-    dependencies:
-      '@tanstack/solid-query': 5.0.0-alpha.16(solid-js@1.7.2)
-      '@trpc/client': 10.18.0(@trpc/server@10.18.0)
-      '@trpc/server': 10.18.0
-      solid-js: 1.7.2
-      solid-start: 0.2.26(@solidjs/meta@0.28.4)(@solidjs/router@0.8.2)(solid-js@1.7.2)(solid-start-node@0.2.26)(solid-start-vercel@0.2.26)(vite@4.2.1)
-    dev: false
-
   /sort-object-keys@1.1.3:
     resolution: {integrity: sha512-855pvK+VkU7PaKYPc+Jjnmt4EzejQHyhhF33q31qG8x7maDzkeFhAAThdCYay11CISO+qAMwjOBP+fPZe0IPyg==}
     dev: true
@@ -7110,6 +7118,10 @@ packages:
 
   /webidl-conversions@3.0.1:
     resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+
+  /whatwg-fetch@3.6.2:
+    resolution: {integrity: sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==}
+    dev: false
 
   /whatwg-url@5.0.0:
     resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
