@@ -20,5 +20,5 @@ export const env = createEnv({
       .transform((v) => Number.parseInt(v)),
   },
   client: {},
-  runtimeEnv: process.env,
+  runtimeEnv: import.meta.env as never,
 });
