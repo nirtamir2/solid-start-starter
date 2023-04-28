@@ -13,6 +13,9 @@ dependencies:
   '@solidjs/router':
     specifier: ^0.8.2
     version: 0.8.2(solid-js@1.7.2)
+  '@t3-oss/env-core':
+    specifier: ^0.2.2
+    version: 0.2.2(zod@3.21.4)
   '@trpc/client':
     specifier: 10.19.1
     version: 10.19.1(@trpc/server@10.19.1)
@@ -1974,6 +1977,14 @@ packages:
     dependencies:
       lodash: 4.17.21
     dev: true
+
+  /@t3-oss/env-core@0.2.2(zod@3.21.4):
+    resolution: {integrity: sha512-Jiuph14/L3L9EDaU0O0YiLeaKUcWA9c3mWYuKem8+L64i3Iwz+IbKdl5Jp4cx+JbOsS/aptwGZplnxSHhm2gMQ==}
+    peerDependencies:
+      zod: ^3.0.0
+    dependencies:
+      zod: 3.21.4
+    dev: false
 
   /@tanstack/eslint-plugin-query@4.29.0:
     resolution: {integrity: sha512-ex+rigzAetqW7vjFA0rqszgPHltI0nbNlsFki4+1b9Kg8Tu6gSSl0M8LJGSvjfnOHsDL5ET3lHHWj+dirdfq5w==}

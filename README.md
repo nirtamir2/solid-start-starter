@@ -22,7 +22,6 @@ It's a minimal opinionated solid-start starter that includes:
 
 ### Environment Variables
 
-- `ENABLE_VC_BUILD` set to `1` .
 - Prisma: `DATABASE_URL` set to your `database url`.
 
 ## Similar projects
